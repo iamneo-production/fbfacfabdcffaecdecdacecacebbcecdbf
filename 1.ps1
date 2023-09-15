@@ -2,9 +2,12 @@ $homeDirectory = $env:USERPROFILE
 
 $folderName = "NewFolder"
 $folderPath = Join-Path -Path $homeDirectory -ChildPath $folderName
-New-Item -Path $folderPath -ItemType Di
+New-Item -Path $folderPath -ItemType Directory
 
+$fileName = "NewFile.txt"
+$filePath = Join-Path -Path $folderPath -ChildPath $fileName
+New-Item -Path $filePath -ItemType File
 
-$fileName = "MyNewFile.txt"
+Set-Content -Path $filePath -Value "This is the content of the new file."
 
-New-Item -ItemType File -Path (Join-Path -Path (Join-Path -Path $homeDirectory -ChildPath $folderName) -ChildPath $fileName)
+Write-Host "Folder '$folderName' and file '$fileName' created in your home directory."
