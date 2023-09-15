@@ -8,6 +8,6 @@ $fileName = "NewFile.txt"
 $filePath = Join-Path -Path $folderPath -ChildPath $fileName
 New-Item -Path $filePath -ItemType File
 
-Set-Content -Path $filePath -Value "This is the content of the new file."
+Set-Content $filePath -Value "This is the content of the new file."
 
 Write-Host "Folder '$folderName' and file '$fileName' created in your home directory."
