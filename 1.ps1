@@ -1,8 +1,9 @@
 $homeDirectory = $env:USERPROFILE
 
 $folderName = "NewFolder"
+$folderPath = Join-Path -Path $homeDirectory -ChildPath $folderName
+New-Item -Path $folderPath -ItemType Di
 
-New-Item -ItemType Directory -Path (Join-Path -Path $homeDirectory -ChildPath $folderName)
 
 $fileName = "MyNewFile.txt"
 
