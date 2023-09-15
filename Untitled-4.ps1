@@ -6,4 +6,8 @@ $number2 = [int]$number2
 
 $total = $number1 + $number2
 
-if ($t)
+if ($total -gt 70) {
+    Write-Host "Pass"
+} else {
+    Write-Host "Fail"
+}
