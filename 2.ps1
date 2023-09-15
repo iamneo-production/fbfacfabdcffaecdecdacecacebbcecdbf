@@ -1,7 +1,5 @@
-$filePath = "Tarun(D:)\"
+$filePath = "C:\path\to\your\file.txt"
 
-$fileContent = "This is the text content of the file.'r'nYou can add more lines as needed."
+$textContent = "This is the text content of the file."
 
-$fileContent | Out-File -FilePath $filePath -Encoding UTF8
-
-Write-Host "File '$filePath' created and text content written to it."
+Out-File -FilePath $filePath -InputObject $textContent
